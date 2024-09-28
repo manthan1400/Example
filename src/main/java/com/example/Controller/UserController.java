@@ -2,10 +2,11 @@ package com.example.Controller;
 
 import com.example.Model.Student;
 import com.example.Service.UserService;
-import org.springframework.http.*;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -33,18 +34,6 @@ public class UserController {
     public ResponseEntity<Optional<Student>> getStudent(@PathVariable int stdId){
         return ResponseEntity.ok(userService.getStudent(stdId));
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

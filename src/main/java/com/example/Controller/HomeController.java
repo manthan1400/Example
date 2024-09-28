@@ -16,9 +16,4 @@ public class HomeController {
     public String login() {
         return "login"; // Render login.html
     }
-
-    @GetMapping("/home")
-    public String home() {
-        return "home"; // Render index.html
-    }
 }
