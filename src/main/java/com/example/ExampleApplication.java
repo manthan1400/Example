@@ -10,6 +10,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+import java.sql.SQLOutput;
+
 
 @SpringBootApplication
 public class ExampleApplication extends SpringBootServletInitializer {
@@ -20,6 +22,8 @@ public class ExampleApplication extends SpringBootServletInitializer {
 		SpringApplication.run(ExampleApplication.class, args);
 
 		logger.info("Application running");
+
+		System.out.println("Gits");
 
 
 	}
