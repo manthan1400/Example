@@ -2,6 +2,8 @@ package com.example.Model;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Embeddable
 @Entity
 public class Address {
@@ -35,5 +37,18 @@ public class Address {
     @Override
     public String toString() {
         return "Address [city=" + city + ", state=" + state + "]";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Address address = (Address) o;
+        return id == address.id && Objects.equals(city, address.city) && Objects.equals(state, address.state);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, city, state);
     }
 }

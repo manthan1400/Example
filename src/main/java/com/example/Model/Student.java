@@ -2,6 +2,8 @@ package com.example.Model;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Entity
 public class Student {
 
@@ -42,5 +44,18 @@ public class Student {
     @Override
     public String toString() {
         return "Student [name=" + name + ", address=" + address + "]";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return stdId == student.stdId && Objects.equals(name, student.name) && Objects.equals(address, student.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(stdId, name, address);
     }
 }
