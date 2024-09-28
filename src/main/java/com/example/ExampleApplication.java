@@ -25,6 +25,8 @@ public class ExampleApplication extends SpringBootServletInitializer {
 
 		System.out.println("Gits");
 
+		System.out.println("print");
+
 
 	}
 }
